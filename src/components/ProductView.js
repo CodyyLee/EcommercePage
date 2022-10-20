@@ -28,14 +28,14 @@ export default function ProductView() {
         <div className='relative flex justify-between items-center h-80 truncate'>
             <button onClick={() => {
                 handleSlide('prev')
-            }} className='rounded-[50%] bg-white w-8 h-8 flex justify-center items-center z-10 mx-4'>
-                <img src={prev} alt='next' />
+            }} className='rounded-[50%] bg-white w-8 h-8 flex justify-center items-center z-10 mx-4 md:w-10 md:h-10'>
+                <img src={prev} alt='next' className='md:w-6/12'/>
             </button>
-            <img className='absolute top-0' src={process.env.PUBLIC_URL + `/images/image-product-${slide}.jpg`} alt='tan and white shoe' />
+            <img className='absolute top-0 md:w-8/12 md:ml-[16.5%]' src={process.env.PUBLIC_URL + `/images/image-product-${slide}.jpg`} alt='tan and white shoe' />
             <button onClick={() => {
                 handleSlide('next')
-            }} className='rounded-[50%] bg-white w-8 h-8 flex justify-center items-center z-10 mx-4'>
-                <img src={next} alt='next' />
+            }} className='rounded-[50%] bg-white w-8 h-8 flex justify-center items-center z-10 mx-4 md:w-10 md:h-10'>
+                <img src={next} alt='next' className='md:w-6/12'/>
             </button>
         </div>
     )

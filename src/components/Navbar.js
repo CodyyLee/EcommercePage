@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+
+import { AppContext } from '../context';
 
 //image imports
 import cart from '../assets/icon-cart.svg';
@@ -7,8 +9,11 @@ import menu from '../assets/icon-menu.svg';
 
 //component import
 import Cart from './Cart';
+import Menu from './Menu';
 
 export default function Navbar() {
+
+    const {store, setStore} = useContext(AppContext);
 
     const [width, setWidth] = useState(window.innerWidth);
     const [cartStatus, setCartStatus] = useState(false);
@@ -19,15 +24,18 @@ export default function Navbar() {
 
     return (
         <nav className='w-screen flex items-center justify-between p-4'>
+            {store.menu ? <Menu /> : null}
             <div className='flex items-center justify-around'>
                 {/* menu button on mobile */}
-                {width < 768 ? <button onClick={() => {}}>
+                {width < 960 ? <button onClick={() => {
+                    setStore({...store, menu: true})
+                }}>
                     <img src={menu} alt='menu' />
                 </button> : null}
                 {/* Brand */}
-                <h1 className='font-main font-bold tracking-tight text-2xl px-2 leading-none'>sneakers</h1>
+                <h1 className='font-main font-bold tracking-tight text-2xl px-2 leading-none pb-[.25em]'>sneakers</h1>
                 {/* menu links if not mobile */}
-                {width >= 768 ? 
+                {width >= 960 ? 
                 <ul>
                     <li className=''>Collections</li>
                     <li className=''>Men</li>
@@ -39,10 +47,11 @@ export default function Navbar() {
             </div>
 
             {/* cart and profile */}
-            <div className='flex items-center justify-around w-1/4'>
+            <div className='flex items-center justify-around w-1/4 relative'>
                 <button className='' onClick={() => {
                     setCartStatus(!cartStatus)
                 }}>
+                    <span className='absolute bg-mainOrange text-white px-[.8em] text-[.5rem] rounded-xl top-[-.5em] md:top-2'>{store.cart.quantity}</span>
                     <img className='text-black' src={cart} alt='cart' />
                 </button>
 
