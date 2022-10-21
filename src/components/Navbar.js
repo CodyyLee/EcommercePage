@@ -39,7 +39,7 @@ export default function Navbar() {
             </div>
 
             {/* cart and profile */}
-            <div className='flex items-center justify-around w-1/4 relative'>
+            <div className='flex items-center justify-around w-1/4 relative lg:w-40'>
                 <button className='' onClick={() => {
                     setCartStatus(!cartStatus)
                 }}>
