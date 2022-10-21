@@ -10,7 +10,7 @@ export default function Menu() {
 
     return (
         <div className='w-full fixed left-0 top-0 h-screen z-40 bg-opaicBlack'>
-            <div className='w-8/12 bg-white h-full'>
+            <div className='w-8/12 bg-white h-full md:w-3/6'>
                 <button className=' m-6' onClick={() => {
                     setStore({...store, menu: false})
                 }}>
@@ -19,11 +19,11 @@ export default function Menu() {
 
                 <div className=' ml-6 mt-4'>
                     <ul className='flex flex-col'>
-                        <li className='font-bold pb-4'>Collections</li>
-                        <li className='font-bold pb-4'>Men</li>
-                        <li className='font-bold pb-4'>Women</li>
-                        <li className='font-bold pb-4'>About</li>
-                        <li className='font-bold pb-4'>Contact</li>
+                        <li className='font-bold pb-4 md:text-xl md:pb-5'>Collections</li>
+                        <li className='font-bold pb-4 md:text-xl md:pb-5'>Men</li>
+                        <li className='font-bold pb-4 md:text-xl md:pb-5'>Women</li>
+                        <li className='font-bold pb-4 md:text-xl md:pb-5'>About</li>
+                        <li className='font-bold pb-4 md:text-xl md:pb-5'>Contact</li>
                     </ul>
                 </div>
             </div>

@@ -17,9 +17,9 @@ function App() {
 
   return (
     <AppContext.Provider value={{store, setStore}}>
-      <div className="mb-20">
+      <div className="mb-20 lg:flex lg:flex-col lg:justify-between lg:h-screen lg:items-center">
         <Navbar />
-        <div className='mt-10'>
+        <div className='md:mt-10 lg:flex lg:justify-center lg:items-center lg:grow lg:mt-[-2.4em]'>
           <ProductView />
           <Details />
         </div>

@@ -9,7 +9,7 @@ export default function Cart({ status }) {
     const {store, setStore} = useContext(AppContext);
 
     return (
-        <div className={status ? 'absolute w-11/12 rounded-lg top-16 z-20 bg-white flex flex-col items-center md:w-6/12 md:right-5 md:shadow-lg' : 'hidden'}>
+        <div className={status ? 'absolute w-11/12 rounded-lg top-16 z-20 bg-white flex flex-col items-center md:w-6/12 md:right-5 md:shadow-lg md:max-w-[384px] lg:top-20 lg:right-32' : 'hidden'}>
             <div className='w-full border-b p-4 font-bold font-main'>
                 <p className='header'>
                     Cart
@@ -42,7 +42,7 @@ export default function Cart({ status }) {
                 </div>
                 
                 {store.cart.name ? 
-                <button className='w-10/12 bg-mainOrange text-white py-2 rounded-lg my-4'>Checkout</button>
+                <button className='w-10/12 bg-mainOrange text-white py-4 rounded-lg my-4 mb-8'>Checkout</button>
                 : null}
         </div>
     )

@@ -12,14 +12,14 @@ export default function Details() {
     const {store, setStore} = useContext(AppContext);
 
     return (
-        <div className='w-full p-4 md:w-8/12 md:m-auto md:px-0'>
+        <div className='w-full p-4 md:w-8/12 md:m-auto md:px-0 lg:w-5/12 lg:p-4'>
             <div className=''>
-                <p className='text-mainOrange tracking-widest uppercase text-[.7rem] opacity-80 font-bold'>Sneaker Company</p>
-                <p className='py-4 text-3xl font-semibold'>Fall Limited Edition Sneakers</p>
-                <p className='text-slate-500 text-md'>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+                <p className='text-mainOrange tracking-widest uppercase text-[.7rem] md:text-[.8rem] opacity-80 font-bold'>Sneaker Company</p>
+                <p className='py-4 text-3xl font-semibold md:text-4xl lg:text-5xl'>Fall Limited Edition Sneakers</p>
+                <p className='text-slate-500 text-md md:text-xl lg:py-4'>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
             </div>
 
-            <div className='flex w-full justify-between py-4'>
+            <div className='flex w-full justify-between py-4 lg:flex-col'>
                 <div className='flex'>
                     <p className='pr-4 text-xl font-bold'>$125.00</p>
                     <p className='px-2 rounded flex justify-center items-center bg-paleOrange font-bold text-mainOrange'>50%</p>
@@ -30,9 +30,9 @@ export default function Details() {
                 </div>
             </div>
 
-            <div className='w-full'>
+            <div className='w-full md:mx-auto lg:flex justify-start items-center'>
                 <Counter />
-                <button className='flex justify-center items-center w-full bg-mainOrange rounded-md p-4 my-4 text-white font-semibold' 
+                <button className=' lg:w-6/12 flex justify-center items-center w-full bg-mainOrange rounded-md p-4 my-4 text-white font-semibold md:my-8' 
                 onClick={() => {
                     if(store.count > 0) {
                         if(store.cart.name) {

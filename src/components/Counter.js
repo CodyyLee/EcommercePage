@@ -1,4 +1,4 @@
-import React, {useState, useContext} from 'react';
+import React, { useContext} from 'react';
 import { AppContext } from '../context';
 
 //icon imports
@@ -10,7 +10,7 @@ export default function Counter() {
     const { store, setStore } = useContext(AppContext);
 
     return (
-        <div className='flex w-full justify-between bg-slate-100 rounded-md p-4 my-2'>
+        <div className='flex w-full justify-between bg-slate-100 rounded-md p-4 my-2 lg:w-4/12 lg:mr-4 items-center lg:h-10 lg:py-8'>
             <button onClick={() => {
                 if(store.count !== 0) {
                     setStore({...store, count: store.count - 1})
