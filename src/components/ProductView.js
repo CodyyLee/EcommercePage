@@ -32,13 +32,16 @@ export default function ProductView() {
             }} className='rounded-[50%] bg-white w-8 h-8 flex justify-center items-center z-10 mx-4 md:w-10 md:h-10 lg:hidden'>
                 <img src={prev} alt='next' className='md:w-6/12'/>
             </button>
+
             <img className='absolute top-0 md:w-8/12 md:ml-[16.5%] lg:w-auto lg:m-0 lg:h-3/6 lg:rounded-xl lg:relative' src={process.env.PUBLIC_URL + `/images/image-product-${slide}.jpg`} alt='tan and white shoe' />
+
             <button onClick={() => {
                 handleSlide('right')
             }} className='rounded-[50%] bg-white w-8 h-8 flex justify-center items-center z-10 mx-4 md:w-10 md:h-10 lg:hidden'>
                 <img src={next} alt='next' className='md:w-6/12'/>
             </button>
-            <div className='sm:hidden lg:flex mx-auto'>
+            
+            <div className='hidden lg:flex mx-auto'>
                 <ImageSelect slide={slide} setSlide={setSlide} />
             </div>
         </div>

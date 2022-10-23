@@ -4,7 +4,7 @@ export default function ImageSelect({ slide, setSlide}) {
     let paths = ['image-product-1.jpg', 'image-product-2.jpg', 'image-product-3.jpg', 'image-product-4.jpg',]
 
     return(
-        <div className='my-6'>
+        <div className='my-6 hidden lg:block'>
             <div className='flex w-full'>
                 {paths.map((el, i) => {
                     return (

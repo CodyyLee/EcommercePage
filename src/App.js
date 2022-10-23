@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+//component imports
 import Details from "./components/Details";
 import Navbar from "./components/Navbar";
 import ProductView from "./components/ProductView";
